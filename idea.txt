@@ -1,0 +1,3 @@
+fair stand game
+hitting moving objects with ball
+button to set up targets, ball can be pickedup, thrown
