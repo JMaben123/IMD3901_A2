@@ -4,11 +4,11 @@
         <script src="/js/aframe.min.js"></script>
         <script src="/js/aframe-environment-component.min.js"></script>
         <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
-  <script src="https://unpkg.com/super-hands@^3.0.1/dist/super-hands.min.js"></script>
+        <script src="js/dragndrop.js"></script>
 
         <link rel="stylesheet" href="/css/user-gesture.css">
 
-
+     
       <script>
         AFRAME.registerComponent('start-experience', {
           init: function () {
@@ -67,9 +67,6 @@
             <!--Play on hit or something-->
             <a-entity class="bell_sound" sound="src:#bell; autoplay:false;"></a-entity>
 
-     
-
-            <a-box hoverable grabbable stretchable draggable dropppable color="red" position="1 2 -1"></a-box>
 
 
             <a-entity id="game_buttons">
@@ -95,13 +92,14 @@
 
               const startGame = function() {
                   console.log("game start");
-                  var box = document.createElement("a-box");
+                  var box = document.createElement('a-box');
                   box.setAttribute('position',{x:0,y:2,z:-5});
-                  box.setAttribute('material',{color:'red'});
-                  box.setAttribute('class','box interactive')
-                  box.setAttribute('onmousedown','movement();')
-                  //document.querySelector("a-scene").appendChild(box);
-                  document.querySelector("#camera_main").appendChild(box);
+                  box.setAttribute('material',{color:'teal'});
+                  box.setAttribute('class','box interactive');
+                  box.setAttribute('dragndrop',true);
+                  //box.setAttribute('onmousedown','movement();')
+                  document.querySelector("a-scene").appendChild(box);
+                  //document.querySelector("#camera_main").appendChild(box);
                  
               }
 
