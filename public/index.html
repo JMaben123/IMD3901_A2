@@ -71,25 +71,25 @@
 
 
             <a-entity id="game_buttons">
-              <a-entity class="button-start interactive" onclick="startGame(); playBell();"  position="-1 0.6 0" geometry="primitive:cylinder; radius:0.15; height:0.2;" 
+              <a-entity class="button-start interactive" onclick="startGame(); playBell();"  position="-1 0.6 -2" geometry="primitive:cylinder; radius:0.15; height:0.2;" 
                     material="color:rgb(100, 255, 100)"
                     animation__mouseenter="property:material.color; type:color; to:rgb(0, 255, 0); startEvents:mouseenter; dur:200"
                     animation__mouseleave="property:material.color; type:color; to:rgb(100, 255, 100); startEvents:mouseleave; dur:200"
-                    animation__click="property:position; from:-1 0.55 0; to:-1 0.6 0; startEvents:click; dur:300"></a-entity>
-                    <a-entity position="-1 0.3 0" geometry="primitive:box; width:0.5; depth:0.5; height:0.6;" material="color:rgb(255, 255, 255)" ></a-entity>
+                    animation__click="property:position; from:-1 0.55 -2; to:-1 0.6 -2; startEvents:click; dur:300"></a-entity>
+                    <a-entity position="-1 0.3 -2" geometry="primitive:box; width:0.5; depth:0.5; height:0.6;" material="color:rgb(255, 255, 255)" ></a-entity>
 
-              <a-entity class="button-end interactive" onclick="endGame();" position="1 0.6 0" geometry="primitive:cylinder; radius:0.15; height:0.2;" 
+              <a-entity class="button-end interactive" onclick="endGame();" position="1 0.6 -2" geometry="primitive:cylinder; radius:0.15; height:0.2;" 
                     material="color:rgb(255, 100, 100)"
                     animation__mouseenter="property:material.color; type:color; to:rgb(255, 0, 0); startEvents:mouseenter; dur:200"
                     animation__mouseleave="property:material.color; type:color; to:rgb(255, 100, 100); startEvents:mouseleave; dur:200"
-                    animation__click="property:position; from:1 0.55 0; to:1 0.6 0; startEvents:click; dur:300"></a-entity>
-                    <a-entity position="1 0.3 0" geometry="primitive:box; width:0.5; depth:0.5; height:0.6;" material="color:rgb(255, 255, 255)" ></a-entity>
+                    animation__click="property:position; from:1 0.55 -2; to:1 0.6 -2; startEvents:click; dur:300"></a-entity>
+                    <a-entity position="1 0.3 -2" geometry="primitive:box; width:0.5; depth:0.5; height:0.6;" material="color:rgb(255, 255, 255)" ></a-entity>
             </a-entity>
 
 
-              <a-entity dynamic-body dragndrop position="1 1-5" geometry="primitive:sphere"></a-entity>
+             <!-- <a-entity dragndrop dynamic-body position="1 1 -5" geometry="primitive:sphere"></a-entity> --> 
             
-              
+              <a-entity id="floor" static-body position="0 -4.5 -2" geometry="primitive:box; width:10; depth:10;height:10" material="color:rgb(100,100,255)"></a-entity>
            
            <script>
             
